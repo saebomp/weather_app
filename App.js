@@ -26,7 +26,7 @@ class App extends Component {
  fetchData = () => {
   this.fetchCityData(this.state.city)
 }
-
+//https://blog.naver.com/aneminw/221854502920  async, await
 fetchCityData = async city => {
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
   const api_call = await fetch(url)
@@ -55,6 +55,9 @@ fetchCityData = async city => {
       pressure, 
       weather 
     } = this.state;
+//     this.state.city 를 그냥 city 로 쓸수있게 해주는 문법.
+// const {xxx,yyy} = this.props 역시 this.props.xxx 를 그냥 xxx로 쓸수있게 해줌
+
     return (
       <View style={styles.container}>
         <Image 
@@ -68,11 +71,12 @@ fetchCityData = async city => {
         uri 주소를 images 에서 가져오는데 [이 안에 들어가는거는 setState 의 weather 에서 가져옴]
         */}
 
-        <Text>Open up App.js to start working on your app!</Text>
+        {/* <Text>Open up App.js to start working on your app!</Text> */}
         <Form 
           onSubmit={this.fetchData}
           onChangeText={text => this.setState({city:text})}
         />
+        {/* The onChangeText is listening for changes to the input. That is your text in regards to (text). We then use es6 arrow notation to call an anonymous function => . From here we call this.setState({}) , which is a built in state management function with react. It sets the variable, (which may or may not be declared) in state to the changed value of (text) to be used later or elsewhere. */}
         <Content
           temp={temp}
           city={city}

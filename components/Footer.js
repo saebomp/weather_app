@@ -29,19 +29,19 @@ const Footer = props => (
             <View style={{flex:1}}>
                 <Text style={styles.textLabel}>Pressure</Text>
                 <Text stlye={{fontSize:30, backgroundColor:'trandparent'}}>
-                    Pressure Value
+                    {props.pressure}
                 </Text>
             </View>
             <View style={{flex:1}}>
                 <Text style={styles.textLabel}>Wind Speed</Text>
                 <Text stlye={{fontSize:30, backgroundColor:'trandparent'}}>
-                    Wind Speed Value
+                    {props.windSpeed}
                 </Text>
             </View>
             <View style={{flex:1}}>
                 <Text style={styles.textLabel}>Min Temp</Text>
                 <Text stlye={{fontSize:30, backgroundColor:'trandparent'}}>
-                    Min Temp Value
+                    {props.minTemp}
                 </Text>
             </View>
         </View>

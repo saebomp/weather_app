@@ -26,10 +26,10 @@ const styles = StyleSheet.create({
       backgroundColor: 'transparent'
     },
     info: {
-      fontSize: 50,
+      fontSize: 30,
       color: 'black',
       paddingLeft: 20,
-      paddingTop: 50
+      paddingTop: 10
     },
     countryName: {
       color: 'black',
@@ -37,9 +37,9 @@ const styles = StyleSheet.create({
       paddingLeft: 20
     },
     cityName: {
-      fontSize: 35,
+      fontSize: 30,
       paddingLeft: 20,
-      paddingTop: 40,
+      paddingTop: 5,
       paddingBottom: 25
     }
   })
