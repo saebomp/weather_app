@@ -104,3 +104,6 @@ const styles = StyleSheet.create({
 })
 
 export default App
+
+
+// source :https://github.com/paulhklam1122/weather-app-wmdd-sept-2020
